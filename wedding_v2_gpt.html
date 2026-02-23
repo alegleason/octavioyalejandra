@@ -540,50 +540,6 @@
     .dress-note p { font-size: 0.9rem; }
 
 
-    /* ── DIRECTIONS ── */
-    #como-llegar {
-      background: var(--cream);
-      max-width: 100%;
-      padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 8vw, 10rem);
-    }
-    #como-llegar .inner { max-width: 860px; margin: 0 auto; }
-    .directions-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.2rem;
-      margin: 2rem 0;
-    }
-    .direction-card {
-      border: 1px solid var(--sand);
-      padding: 1.5rem;
-      background: var(--white);
-      transition: border-color 0.3s;
-    }
-    .direction-card:hover { border-color: var(--gold); }
-    .direction-card h4 {
-      font-family: 'Cinzel', serif;
-      font-size: 0.62rem;
-      letter-spacing: 0.2em;
-      color: var(--gold);
-      margin-bottom: 0.6rem;
-    }
-    .direction-card p { font-size: 0.88rem; line-height: 1.7; }
-    .direction-icon { font-size: 1.4rem; margin-bottom: 0.6rem; display: block; }
-    .maps-link {
-      display: inline-block;
-      margin-top: 1.5rem;
-      font-family: 'Cinzel', serif;
-      font-size: 0.62rem;
-      letter-spacing: 0.2em;
-      color: var(--terra);
-      border-bottom: 1px solid var(--terra);
-      text-decoration: none;
-      padding-bottom: 2px;
-      transition: color 0.3s;
-    }
-    .maps-link:hover { color: var(--gold); border-color: var(--gold); }
-
-
     /* ── FOOTER ── */
     footer {
       background: var(--olive);
@@ -735,10 +691,55 @@
     }
     .wa-btn:hover { background: #1ebe5d; transform: translateY(-2px); }
     .wa-btn svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
-    .wa-center {
+    .wa-divider {
+      display: flex; align-items: center; gap: 1rem;
+      margin: 1.5rem 0 0;
+      color: var(--terra);
+      font-family: 'Cinzel', serif;
+      font-size: 0.58rem;
+      letter-spacing: 0.2em;
+    }
+    .wa-divider::before, .wa-divider::after {
+      content: ''; flex: 1; height: 1px; background: var(--terra); opacity: 0.35;
+    }
+    .rsvp-actions {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      margin-top: 0.5rem;
+      gap: 0.8rem;
+      margin-top: 1.2rem;
+    }
+
+    .outline-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.72rem 1.4rem;
+      border: 1px solid var(--terra);
+      color: var(--terra);
+      background: transparent;
+      font-family: 'Cinzel', serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.14em;
+      cursor: pointer;
+      transition: background 0.25s, color 0.25s, transform 0.2s;
+    }
+    .outline-btn:hover {
+      background: var(--terra);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .outline-btn:focus-visible,
+    .wa-btn:focus-visible,
+    .cal-btn:focus-visible,
+    .copy-btn:focus-visible,
+    .lang-btn:focus-visible,
+    .gallery-item:focus-visible,
+    .lightbox-close:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
     }
 
     .wa-btn:focus-visible,
@@ -750,6 +751,8 @@
       outline: 2px solid var(--gold);
       outline-offset: 3px;
     }
+
+    /* ── FOOTER ── */
 
     /* ── SCROLL REVEAL ── */
     .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.9s ease, transform 0.9s ease; }
@@ -882,13 +885,13 @@
 <h2 class="section-title" data-html-en="A love story in &lt;em&gt;images&lt;/em&gt;" data-html-es="Un amor en &lt;em&gt;imágenes&lt;/em&gt;">Un amor en <em>imágenes</em></h2>
 <div class="gold-rule" style="margin: 0 auto 0;"></div>
 <div class="gallery-grid">
-<div aria-label="Abrir foto de Alejandro y Alejandra posando juntos" data-aria-en="Open photo of Alejandro and Alejandra posing together" data-aria-es="Abrir foto de Alejandro y Alejandra posando juntos" class="gallery-item" onclick="openLightbox(this)" onkeydown="handleGalleryKey(event, this)" role="button" tabindex="0">
+<div aria-label="Abrir imagen en grande" data-aria-en="Open full-size image" data-aria-es="Abrir imagen en grande" class="gallery-item" onclick="openLightbox(this)" onkeydown="handleGalleryKey(event, this)" role="button" tabindex="0">
 <img alt="Alejandro y Alejandra posando juntos" loading="lazy" src="https://res.cloudinary.com/dw8fyhfrg/image/upload/v1771732122/WhatsApp_Image_2026-02-21_at_7.42.05_PM_i46fy6.jpg"/>
 </div>
-<div aria-label="Abrir sesión de fotos en exterior de Alejandro y Alejandra" data-aria-en="Open outdoor photoshoot image of Alejandro and Alejandra" data-aria-es="Abrir sesión de fotos en exterior de Alejandro y Alejandra" class="gallery-item" onclick="openLightbox(this)" onkeydown="handleGalleryKey(event, this)" role="button" tabindex="0">
+<div aria-label="Abrir imagen en grande" data-aria-en="Open full-size image" data-aria-es="Abrir imagen en grande" class="gallery-item" onclick="openLightbox(this)" onkeydown="handleGalleryKey(event, this)" role="button" tabindex="0">
 <img alt="Sesión de fotos en exterior de Alejandro y Alejandra" loading="lazy" src="https://res.cloudinary.com/dw8fyhfrg/image/upload/v1771732091/WhatsApp_Image_2026-02-21_at_7.41.26_PM_tezamu.jpg"/>
 </div>
-<div aria-label="Abrir retrato romántico de la pareja" data-aria-en="Open romantic portrait of the couple" data-aria-es="Abrir retrato romántico de la pareja" class="gallery-item" onclick="openLightbox(this)" onkeydown="handleGalleryKey(event, this)" role="button" tabindex="0">
+<div aria-label="Abrir imagen en grande" data-aria-en="Open full-size image" data-aria-es="Abrir imagen en grande" class="gallery-item" onclick="openLightbox(this)" onkeydown="handleGalleryKey(event, this)" role="button" tabindex="0">
 <img alt="Retrato romántico de la pareja" loading="lazy" src="https://res.cloudinary.com/dw8fyhfrg/image/upload/v1771732087/WhatsApp_Image_2026-02-21_at_7.41.04_PM_ew2qag.jpg"/>
 </div>
 </div>
@@ -1137,7 +1140,8 @@
 <h2 class="section-title" data-html-en="Will you join &lt;em&gt;us&lt;/em&gt;?" data-html-es="¿Vienes con &lt;em&gt;nosotros?&lt;/em&gt;">¿Vienes con <em>nosotros?</em></h2>
 <div class="gold-rule"></div>
 <p data-en="Send us a WhatsApp message to confirm your attendance and see the seats reserved for you." data-es="Envíanos un mensaje por WhatsApp para confirmar tu asistencia y conocer los lugares reservados para ti.">Envíanos un mensaje por WhatsApp para confirmar tu asistencia y conocer los lugares reservados para ti.</p>
-<div class="wa-center">
+<div class="rsvp-actions">
+<button class="outline-btn" data-en="Find my invitation" data-es="Buscar mi invitación" onclick="openEnvelope()" type="button">Buscar mi invitación</button>
 <a class="wa-btn" href="https://wa.me/529991234567?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Alejandro%20%26%20Alejandra%20%F0%9F%A4%8D" rel="noopener" target="_blank">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"></path></svg>
 <span data-en="Confirm on WhatsApp" data-es="Confirmar por WhatsApp">Confirmar por WhatsApp</span>
@@ -1153,6 +1157,45 @@
 <div aria-label="Language" class="lang-toggle" role="group">
 <button aria-label="Cambiar idioma a español" data-aria-en="Switch language to Spanish" data-aria-es="Cambiar idioma a español" class="lang-btn active" id="btn-es" onclick="setLang('es')" type="button">ES</button>
 <button aria-label="Switch language to English" data-aria-en="Switch language to English" data-aria-es="Cambiar idioma a inglés" class="lang-btn" id="btn-en" onclick="setLang('en')" type="button">EN</button>
+</div>
+<!-- ENVELOPE OVERLAY -->
+<div class="envelope-overlay" id="envelope-overlay" onclick="handleEnvelopeClick(event)">
+<div style="display:flex; flex-direction:column; align-items:center;">
+<div class="envelope-wrap" id="envelope-wrap">
+<div class="envelope-body">
+<!-- Letter inside -->
+<div class="envelope-letter">
+<p data-en="With love &amp; joy," data-es="Con amor &amp; alegría,">Con amor &amp; alegría,</p>
+<div class="letter-names">Alejandro &amp; Alejandra</div>
+<p style="margin-top:0.5rem; font-size:0.8rem;">5 · XII · 2026</p>
+</div>
+<!-- Folds -->
+<div class="envelope-fold-left"></div>
+<div class="envelope-fold-right"></div>
+<!-- Flap -->
+<div class="envelope-flap"></div>
+<!-- Wax seal -->
+<div class="wax-seal">A&amp;A</div>
+</div>
+<p class="envelope-hint" data-en="Tap to open" data-es="Toca para abrir">Toca para abrir</p>
+</div>
+<!-- Search form (appears after envelope opens) -->
+<div id="envelope-search" style="
+      width: min(420px, 90vw); margin-top: 1.5rem;
+      opacity: 0; transform: translateY(16px);
+      transition: opacity 0.6s ease 0.9s, transform 0.6s ease 0.9s;
+      pointer-events: none;
+    ">
+<div class="confirm-search">
+<input autocomplete="off" data-ph-en="Type your name..." data-ph-es="Escribe tu nombre..." id="guest-input" placeholder="Escribe tu nombre..." type="text"/>
+<button data-en="Search" data-es="Buscar" onclick="searchGuest()">Buscar</button>
+</div>
+<div id="guest-result"></div>
+<p style="margin-top:1rem; text-align:center;">
+<button data-en="✕ Close" data-es="✕ Cerrar" onclick="closeEnvelope()" style="background:none;border:none;color:var(--sand);font-family:'Cinzel',serif;font-size:0.55rem;letter-spacing:0.15em;cursor:pointer;">✕ Cerrar</button>
+</p>
+</div>
+</div>
 </div>
 
 <footer>
@@ -1191,6 +1234,12 @@
     if (copyBtn && copyBtn.textContent !== (lang === 'en' ? 'Copied!' : '¡Copiado!')) {
       copyBtn.textContent = lang === 'en' ? 'Copy CLABE' : 'Copiar CLABE';
     }
+
+
+    // Swap ARIA labels (accessibility + language consistency)
+    document.querySelectorAll('[data-aria-es][data-aria-en]').forEach(el => {
+      el.setAttribute('aria-label', el.getAttribute('data-aria-' + lang));
+    });
 
 
     // Swap ARIA labels (accessibility + language consistency)
@@ -1251,6 +1300,18 @@
   }
 
 
+  function handleGalleryKey(e, el) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openLightbox(el);
+    }
+  }
+
+  document.getElementById('guest-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') searchGuest();
+  });
+
+  // ── LIGHTBOX ──
   function handleGalleryKey(e, el) {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
