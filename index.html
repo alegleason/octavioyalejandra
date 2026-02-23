@@ -4,6 +4,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Invitación de boda de Alejandro y Alejandra: galería, itinerario, hospedaje, ubicación, regalos y confirmación por WhatsApp." name="description"/>
+<meta content="Alejandro &amp; Alejandra — 05 · XII · 2026" property="og:title"/>
+<meta content="Invitación de boda con todos los detalles del evento en Hacienda Kinchil, Mérida, Yucatán." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="summary_large_image" name="twitter:card"/>
 <title>Alejandro &amp; Alejandra — 05 · XII · 2026</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -642,6 +647,15 @@
       .gallery-item:nth-child(1) { grid-column: span 2 !important; min-height: 240px !important; }
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      #hero-particles { display: none; }
+    }
+
     /* Lightbox */
     .lightbox {
       display: none;
@@ -825,7 +839,7 @@
 </head>
 <body>
 <!-- NAV -->
-<nav>
+<nav aria-label="Navegación principal">
 <a data-en="Home" data-es="Inicio" href="#hero">Inicio</a>
 <a data-en="Photos" data-es="Fotos" href="#galeria">Fotos</a>
 <a data-en="Family" data-es="Familia" href="#padres">Familia</a>
@@ -977,14 +991,14 @@
 </svg>
 <div style="flex:1;max-width:80px;height:1px;background:linear-gradient(to left,transparent,rgba(176,141,87,0.5));"></div>
 </div>
-<span class="section-eyebrow">Hospedaje</span>
+<span class="section-eyebrow" data-en="Lodging" data-es="Hospedaje">Hospedaje</span>
 <h2 class="section-title">Hacienda <em>Kinchil</em></h2>
 <div class="gold-rule" style="margin: 0 auto 2rem;"></div>
 <p data-en="This is a destination wedding — we invite you to stay with us at Hacienda Kinchil, a colonial gem just outside Mérida. Rooms will be available starting Friday, December 4. To reserve your room, please contact the hacienda directly and mention the event." data-es="Esta es una boda destino — los invitamos a hospedarse con nosotros en la Hacienda Kinchil, una joya colonial a las afueras de Mérida. Las habitaciones estarán disponibles a partir del viernes 4 de diciembre. Para reservar tu cuarto, comunícate directamente a la hacienda mencionando el evento" style="color: var(--sand);">Esta es una boda destino — los invitamos a hospedarse con nosotros en la Hacienda Kinchil, una joya colonial a las afueras de Mérida. Las habitaciones estarán disponibles a partir del viernes 4 de diciembre. Para reservar tu cuarto, comunícate directamente a la hacienda mencionando el evento</p>
-<a class="hotel-link" href="https://www.haciendakinchil.com" rel="noopener" target="_blank">
+<a class="hotel-link" href="https://www.haciendakinchil.com" rel="noopener noreferrer" target="_blank">
       www.haciendakinchil.com ↗
     </a>
-<a class="hotel-link" href="https://www.instagram.com/hacienda_kinchil/" rel="noopener" style="margin-left: 1.5rem; display:inline-flex; align-items:center; gap:0.4rem;" target="_blank">
+<a class="hotel-link" href="https://www.instagram.com/hacienda_kinchil/" rel="noopener noreferrer" style="margin-left: 1.5rem; display:inline-flex; align-items:center; gap:0.4rem;" target="_blank">
 <svg fill="currentColor" height="13" style="vertical-align:middle;opacity:0.85;" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
 </svg>
@@ -1012,7 +1026,7 @@
 <div class="directions-grid" style="margin-top: 2.5rem;">
 <div class="direction-card">
 <span class="direction-icon">🚗</span>
-<h4>En Auto &amp; Estacionamiento</h4>
+<h4 data-en="By Car &amp; Parking" data-es="En Auto &amp; Estacionamiento">En Auto &amp; Estacionamiento</h4>
 <p data-html-en="From downtown Mérida, take the &lt;strong&gt;Mérida–Uxmal&lt;/strong&gt; highway (Federal 261) south. After ~27 km, follow the signs to Kinchil. The hacienda offers ample &lt;strong&gt;free parking&lt;/strong&gt; and valet service starting at 3:30 PM." data-html-es="Desde Mérida centro, toma la carretera &lt;strong&gt;Mérida–Uxmal&lt;/strong&gt; (Federal 261) hacia el sur. Después de aprox. 27 km, sigue las indicaciones a Kinchil. La hacienda cuenta con amplio &lt;strong&gt;estacionamiento gratuito&lt;/strong&gt; y personal de valet a partir de las 3:30 PM.">Desde Mérida centro, toma la carretera <strong>Mérida–Uxmal</strong> (Federal 261) hacia el sur. Después de aprox. 27 km, sigue las indicaciones a Kinchil. La hacienda cuenta con amplio <strong>estacionamiento gratuito</strong> y personal de valet a partir de las 3:30 PM.</p>
 </div>
 <div class="direction-card">
@@ -1022,11 +1036,11 @@
 </div>
 <div class="direction-card">
 <span class="direction-icon">🚌</span>
-<h4>Traslado Organizado</h4>
+<h4 data-en="Organized Shuttle" data-es="Traslado Organizado">Traslado Organizado</h4>
 <p data-html-en="For guests staying at hotels in downtown Mérida, we will coordinate a &lt;strong&gt;shuttle bus&lt;/strong&gt;. Details and sign‑up coming soon via WhatsApp." data-html-es="Para quienes se hospeden en hoteles del centro de Mérida, coordinaremos un &lt;strong&gt;autobús de traslado&lt;/strong&gt;. Detalles e inscripción próximamente vía WhatsApp.">Para quienes se hospeden en hoteles del centro de Mérida, coordinaremos un <strong>autobús de traslado</strong>. Detalles e inscripción próximamente vía WhatsApp.</p>
 </div>
 </div>
-<a class="maps-link" href="https://maps.google.com/?q=Hacienda+Kinchil,+Yucatan,+Mexico" rel="noopener" target="_blank">
+<a class="maps-link" data-en="Open in Google Maps ↗" data-es="Abrir en Google Maps ↗" href="https://maps.google.com/?q=Hacienda+Kinchil,+Yucatan,+Mexico" rel="noopener noreferrer" target="_blank">
       Abrir en Google Maps ↗
     </a>
 <div class="map-wrap" style="margin-top: 1.5rem;">
@@ -1042,13 +1056,13 @@
 <div class="gold-rule"></div>
 <p data-en="Your presence is the best gift. If you’d like to give something, here are a few options:" data-es="Su presencia es el mejor regalo. Si desean hacernos un obsequio, con gratitud les compartimos nuestras opciones:">Su presencia es el mejor regalo. Si desean hacernos un obsequio, con gratitud les compartimos nuestras opciones:</p>
 <div class="bank-card">
-<h3>Transferencia Bancaria</h3>
+<h3 data-en="Bank Transfer" data-es="Transferencia Bancaria">Transferencia Bancaria</h3>
 <div class="bank-detail">
-<span class="bank-key">Nombre</span>
+<span class="bank-key" data-en="Name" data-es="Nombre">Nombre</span>
 <span class="bank-val">Alejandra Locken Castilla</span>
 </div>
 <div class="bank-detail">
-<span class="bank-key">Banco</span>
+<span class="bank-key" data-en="Bank" data-es="Banco">Banco</span>
 <span class="bank-val">BBVA México</span>
 </div>
 <div class="bank-detail">
@@ -1056,22 +1070,22 @@
 <span class="bank-val" id="clabe-val">012 910 01511854655 8</span>
 </div>
 <div class="bank-detail">
-<span class="bank-key">Concepto</span>
-<span class="bank-val">Tu nombre completo</span>
+<span class="bank-key" data-en="Reference" data-es="Concepto">Concepto</span>
+<span class="bank-val" data-en="Your full name" data-es="Tu nombre completo">Tu nombre completo</span>
 </div>
-<button class="copy-btn" onclick="copyClabe()">Copiar CLABE</button>
+<button class="copy-btn" onclick="copyClabe()" type="button">Copiar CLABE</button>
 </div>
 <div class="gifts-grid">
 <div class="gift-card">
 <h3>Liverpool</h3>
 <p data-en="Gift registry in-store and online" data-es="Mesa de regalos en tienda y en línea">Mesa de regalos en tienda y en línea</p>
-<div class="event-ref">No. Evento: 83726451</div>
+<div class="event-ref" data-en="Event No.: 83726451" data-es="No. Evento: 83726451">No. Evento: 83726451</div>
 <p data-en="Find the event at any Liverpool store or at liverpool.com.mx" data-es="Busca el evento en cualquier tienda Liverpool o en liverpool.com.mx" style="font-size:0.8rem; color:var(--moss);">Busca el evento en cualquier tienda Liverpool o en liverpool.com.mx</p>
 </div>
 <div class="gift-card">
 <h3>Palacio de Hierro</h3>
 <p data-en="Gift registry in-store and online" data-es="Mesa de regalos en tienda y en línea">Mesa de regalos en tienda y en línea</p>
-<div class="event-ref">No. Evento: 40129836</div>
+<div class="event-ref" data-en="Event No.: 40129836" data-es="No. Evento: 40129836">No. Evento: 40129836</div>
 <p data-en="Find the event at any Palacio de Hierro store or at elpalaciodehierro.com" data-es="Busca el evento en cualquier Palacio de Hierro o en elpalaciodehierro.com" style="font-size:0.8rem; color:var(--moss);">Busca el evento en cualquier Palacio de Hierro o en elpalaciodehierro.com</p>
 </div>
 </div>
@@ -1081,50 +1095,50 @@
 <div id="dresscode" style="background: var(--cream);">
 <div class="inner reveal" style="max-width:800px; margin: 0 auto; text-align:center; padding: clamp(4rem,8vw,7rem) clamp(1.5rem,8vw,10rem);">
 <span class="section-eyebrow" data-en="Dress code" data-es="Vestimenta">Vestimenta</span>
-<h2 class="section-title" style="color:var(--bark);">Formal <em>Tropical</em></h2>
+<h2 class="section-title" data-html-en="Tropical &lt;em&gt;Formal&lt;/em&gt;" data-html-es="Formal &lt;em&gt;Tropical&lt;/em&gt;" style="color:var(--bark);">Formal <em>Tropical</em></h2>
 <div class="gold-rule" style="margin:0 auto 2rem;"></div>
 <p data-en="December in Mérida calls for elegance with comfort. We kindly ask for tropical formal attire — lightweight fabrics in earth, cream, and sand tones." data-es="Mérida en diciembre invita a la elegancia y a la frescura. Les pedimos vestimenta formal tropical — telas ligeras, colores tierra, crema y arena." style="color:var(--moss);">Mérida en diciembre invita a la elegancia y a la frescura. Les pedimos vestimenta formal tropical — telas ligeras, colores tierra, crema y arena.</p>
 <div class="dress-palette" style="margin: 2.5rem auto; gap:1.5rem;">
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
 <div class="swatch" style="background:#f5f0e8; border:1px solid #c8b89a;"></div>
-<span style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Crema</span>
+<span data-en="Cream" data-es="Crema" style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Crema</span>
 </div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
 <div class="swatch" style="background:#c8b89a;"></div>
-<span style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Arena</span>
+<span data-en="Sand" data-es="Arena" style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Arena</span>
 </div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
 <div class="swatch" style="background:#8b6f47;"></div>
-<span style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Terra</span>
+<span data-en="Terra" data-es="Terra" style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Terra</span>
 </div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
 <div class="swatch" style="background:#2e4440;"></div>
-<span style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Olivo</span>
+<span data-en="Olive" data-es="Olivo" style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Olivo</span>
 </div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
 <div class="swatch" style="background:#3d2b1f;"></div>
-<span style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Corteza</span>
+<span data-en="Bark" data-es="Corteza" style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Corteza</span>
 </div>
 <div style="display:flex;flex-direction:column;align-items:center;gap:0.5rem;">
 <div class="swatch" style="background:#b08d57;"></div>
-<span style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Dorado</span>
+<span data-en="Gold" data-es="Dorado" style="font-size:0.6rem;color:var(--moss);font-family:'Cinzel',serif;">Dorado</span>
 </div>
 </div>
 <div class="dress-notes">
 <div class="dress-note">
-<h4>Caballeros</h4>
+<h4 data-en="Gentlemen" data-es="Caballeros">Caballeros</h4>
 <p data-en="Suit or formal guayabera in neutral tones. Linen is welcome. Tie optional." data-es="Traje o guayabera formal en colores neutros. Se permite lino. Sin corbata obligatoria.">Traje o guayabera formal en colores neutros. Se permite lino. Sin corbata obligatoria.</p>
 </div>
 <div class="dress-note">
-<h4>Damas</h4>
+<h4 data-en="Ladies" data-es="Damas">Damas</h4>
 <p data-en="Formal long or midi dress in earth, cream, or gold tones. Please avoid white and ivory." data-es="Vestido largo o midi de gala en tonos tierra, crema o dorado. Evitar el blanco e ivory.">Vestido largo o midi de gala en tonos tierra, crema o dorado. Evitar el blanco e ivory.</p>
 </div>
 <div class="dress-note">
-<h4>Recomendamos</h4>
+<h4 data-en="We Recommend" data-es="Recomendamos">Recomendamos</h4>
 <p data-en="Comfortable shoes recommended — the hacienda has gardens and stone paths. Bring a shawl or light jacket for the evening." data-es="Calzado cómodo — la hacienda tiene jardines y adoquín. Llevar chal o chamarra ligera para la noche.">Calzado cómodo — la hacienda tiene jardines y adoquín. Llevar chal o chamarra ligera para la noche.</p>
 </div>
 <div class="dress-note">
-<h4>Por favor evitar</h4>
+<h4 data-en="Please Avoid" data-es="Por favor evitar">Por favor evitar</h4>
 <p data-en="White, ivory, or very bright colors that compete with the bride. Beachwear or casual attire." data-es="Blanco, ivory o colores muy saturados que compitan con la novia. Ropa de playa o casual.">Blanco, ivory o colores muy saturados que compitan con la novia. Ropa de playa o casual.</p>
 </div>
 </div>
@@ -1138,7 +1152,7 @@
 <div class="gold-rule"></div>
 <p data-en="Send us a WhatsApp message to confirm your attendance and see the seats reserved for you." data-es="Envíanos un mensaje por WhatsApp para confirmar tu asistencia y conocer los lugares reservados para ti.">Envíanos un mensaje por WhatsApp para confirmar tu asistencia y conocer los lugares reservados para ti.</p>
 <div class="wa-center">
-<a class="wa-btn" href="https://wa.me/529991234567?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Alejandro%20%26%20Alejandra%20%F0%9F%A4%8D" rel="noopener" target="_blank">
+<a class="wa-btn" href="https://wa.me/529991234567?text=Hola%2C%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Alejandro%20%26%20Alejandra%20%F0%9F%A4%8D" rel="noopener noreferrer" target="_blank">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"></path></svg>
 <span data-en="Confirm on WhatsApp" data-es="Confirmar por WhatsApp">Confirmar por WhatsApp</span>
     </a>
