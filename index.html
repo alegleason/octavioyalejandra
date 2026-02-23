@@ -1394,25 +1394,47 @@
   // ── SAVE TO CALENDAR (ICS download) ──
   function downloadICS(e) {
     e.preventDefault();
-    const icsContent = [
+    const nowStamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+    const uid = `alejandro-alejandra-20261205-${Date.now()}@octavioyalejandra`;
+
+    const escapeICS = (text) => String(text)
+      .replace(/\\/g, '\\\\')
+      .replace(/\n/g, '\\n')
+      .replace(/,/g, '\\,')
+      .replace(/;/g, '\\;');
+
+    const foldICSLine = (line) => {
+      if (line.length <= 74) return line;
+      const pieces = [];
+      for (let i = 0; i < line.length; i += 74) {
+        pieces.push(i === 0 ? line.slice(i, i + 74) : ` ${line.slice(i, i + 74)}`);
+      }
+      return pieces.join('\r\n');
+    };
+
+    const icsLines = [
       'BEGIN:VCALENDAR',
       'VERSION:2.0',
-      'PRODID:-//Alejandro & Alejandra Wedding//EN',
+      'PRODID:-//Alejandro Alejandra Wedding//EN',
       'CALSCALE:GREGORIAN',
       'METHOD:PUBLISH',
       'BEGIN:VEVENT',
-      'DTSTART:20261205T160000',
-      'DTEND:20261206T030000',
-      'SUMMARY:Boda de Alejandro & Alejandra / Wedding of Alejandro & Alejandra',
-      'DESCRIPTION:Ceremonia Religiosa 4:00 PM — Catedral de San Ildefonso\\nCoctel 6:00 PM — Hacienda Kinchil\\nRecepción & Cena 8:00 PM — Hacienda Kinchil',
-      'LOCATION:Hacienda Kinchil\\, Kinchil\\, Yucatán\\, Mexico',
+      `UID:${uid}`,
+      `DTSTAMP:${nowStamp}`,
+      'DTSTART:20261205T220000Z',
+      'DTEND:20261206T090000Z',
+      foldICSLine(`SUMMARY:${escapeICS('Boda de Alejandro y Alejandra / Wedding of Alejandro and Alejandra')}`),
+      foldICSLine(`DESCRIPTION:${escapeICS('Ceremonia Religiosa 4:00 PM - Catedral de San Ildefonso\\nCoctel 6:00 PM - Hacienda Kinchil\\nRecepcion y Cena 8:00 PM - Hacienda Kinchil')}`),
+      foldICSLine(`LOCATION:${escapeICS('Hacienda Kinchil, Kinchil, Yucatan, Mexico')}`),
       'GEO:20.9098401;-89.97112299',
       'URL:https://maps.google.com/?q=Hacienda+Kinchil,+Yucatan,+Mexico',
       'STATUS:CONFIRMED',
       'TRANSP:OPAQUE',
       'END:VEVENT',
       'END:VCALENDAR'
-    ].join('\r\n');
+    ];
+
+    const icsContent = icsLines.join('\r\n');
 
     const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
     const url = URL.createObjectURL(blob);
