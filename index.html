@@ -108,28 +108,67 @@
 
 
 
-    /* Decorative hacienda arch backdrop */
+    /* Decorative hacienda backdrop */
     #hero::before {
       content: '';
       position: absolute;
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
-      width: min(700px, 90vw);
-      height: min(780px, 100vw);
+      width: min(760px, 92vw);
+      height: min(820px, 102vw);
       border-radius: 50% 50% 0 0 / 50% 50% 0 0;
-      border: 1px solid rgba(46, 68, 64, 0.20);
+      border: 1px solid rgba(46, 68, 64, 0.16);
       pointer-events: none;
+      z-index: 0;
     }
     #hero::after {
       content: '';
       position: absolute;
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
-      width: min(560px, 72vw);
-      height: min(620px, 80vw);
+      width: min(610px, 76vw);
+      height: min(670px, 86vw);
       border-radius: 50% 50% 0 0 / 50% 50% 0 0;
-      border: 1px solid rgba(46, 68, 64, 0.12);
+      border: 1px solid rgba(46, 68, 64, 0.1);
       pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-hacienda {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -52%);
+      width: min(860px, 94vw);
+      height: min(520px, 62vw);
+      min-height: 250px;
+      pointer-events: none;
+      opacity: 0.35;
+      z-index: 0;
+    }
+    .hero-hacienda svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .hacienda-line {
+      fill: none;
+      stroke: rgba(61, 43, 31, 0.35);
+      stroke-width: 2.3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .hacienda-detail {
+      fill: none;
+      stroke: rgba(46, 68, 64, 0.32);
+      stroke-width: 1.3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .hacienda-fill {
+      fill: rgba(212, 180, 131, 0.11);
+      stroke: rgba(61, 43, 31, 0.2);
+      stroke-width: 1.2;
     }
 
     .hero-eyebrow {
@@ -870,6 +909,25 @@
     }
 
     /* ── RESPONSIVE NAV ── */
+    
+
+    @media (max-width: 900px) {
+      .hero-hacienda {
+        opacity: 0.3;
+        width: min(760px, 98vw);
+        height: min(460px, 70vw);
+      }
+    }
+    @media (max-width: 640px) {
+      .hero-hacienda {
+        opacity: 0.24;
+        top: 52%;
+        height: min(360px, 76vw);
+      }
+      .hacienda-line { stroke-width: 1.9; }
+      .hacienda-detail { stroke-width: 1.1; }
+    }
+
     @media (max-width: 640px) {
       nav { gap: 1.2rem; padding: 0.9rem 1rem; flex-wrap: wrap; justify-content: center; }
       nav a { font-size: 0.55rem; }
@@ -893,6 +951,33 @@
 <!-- HERO -->
 <section id="hero">
 <canvas id="hero-particles"></canvas>
+<div aria-hidden="true" class="hero-hacienda">
+<svg viewBox="0 0 860 520" xmlns="http://www.w3.org/2000/svg">
+<path class="hacienda-fill" d="M140 404H720V445H140z"/>
+<path class="hacienda-line" d="M160 404h540"/>
+<path class="hacienda-line" d="M188 404v-136h484v136"/>
+<path class="hacienda-line" d="M188 268h484"/>
+<path class="hacienda-line" d="M336 268l96-86 96 86"/>
+<path class="hacienda-line" d="M432 182v-34"/>
+<path class="hacienda-line" d="M422 158h20"/>
+<path class="hacienda-line" d="M430 123h4v20h-4z"/>
+<path class="hacienda-fill" d="M408 146h48l-7-20h-34z"/>
+<path class="hacienda-line" d="M402 268h60v-84h-60z"/>
+<path class="hacienda-detail" d="M416 268v-55a16 16 0 0 1 32 0v55"/>
+<circle class="hacienda-detail" cx="432" cy="210" r="6"/>
+<path class="hacienda-line" d="M222 404v-136M286 404v-136M350 404v-136M514 404v-136M578 404v-136M642 404v-136"/>
+<path class="hacienda-detail" d="M188 404v18M672 404v18"/>
+<path class="hacienda-line" d="M222 404v-42a32 32 0 0 1 64 0v42"/>
+<path class="hacienda-line" d="M286 404v-42a32 32 0 0 1 64 0v42"/>
+<path class="hacienda-line" d="M350 404v-42a32 32 0 0 1 64 0v42"/>
+<path class="hacienda-line" d="M446 404v-42a32 32 0 0 1 64 0v42"/>
+<path class="hacienda-line" d="M510 404v-42a32 32 0 0 1 64 0v42"/>
+<path class="hacienda-line" d="M574 404v-42a32 32 0 0 1 64 0v42"/>
+<path class="hacienda-detail" d="M160 445h540"/>
+<path class="hacienda-detail" d="M214 324h426"/>
+<path class="hacienda-detail" d="M377 240h110"/>
+</svg>
+</div>
 <p class="hero-eyebrow" data-en="With God's blessing and the love of our families" data-es="Con la bendición de Dios y de nuestras familias">Con la bendición de Dios y de nuestras familias</p>
 <h1 class="hero-names">
 <em>Alejandra</em>
