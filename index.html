@@ -109,31 +109,6 @@
 
 
     /* Decorative hacienda backdrop */
-    #hero::before {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: min(760px, 92vw);
-      height: min(820px, 102vw);
-      border-radius: 50% 50% 0 0 / 50% 50% 0 0;
-      border: 1px solid rgba(46, 68, 64, 0.16);
-      pointer-events: none;
-      z-index: 0;
-    }
-    #hero::after {
-      content: '';
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      width: min(610px, 76vw);
-      height: min(670px, 86vw);
-      border-radius: 50% 50% 0 0 / 50% 50% 0 0;
-      border: 1px solid rgba(46, 68, 64, 0.1);
-      pointer-events: none;
-      z-index: 0;
-    }
-
     .hero-hacienda {
       position: absolute;
       left: 50%;
@@ -953,6 +928,7 @@
 <canvas id="hero-particles"></canvas>
 <div aria-hidden="true" class="hero-hacienda">
 <svg viewBox="0 0 860 520" xmlns="http://www.w3.org/2000/svg">
+<path class="hacienda-detail" d="M110 445V245a322 322 0 0 1 644 0v200"/>
 <path class="hacienda-fill" d="M140 404H720V445H140z"/>
 <path class="hacienda-line" d="M160 404h540"/>
 <path class="hacienda-line" d="M188 404v-136h484v136"/>
